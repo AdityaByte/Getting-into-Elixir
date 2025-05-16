@@ -1,0 +1,5 @@
+Must read this:
+-> Right now we are preferring the exs extension cause ex files are compiled to the bytecode and then interpreted by the beam
+-> But exs are scripts files they are just interpreted by the beam vm.
+
+-> That's why i am preferring exs cause for learning and testing code it is useful.
