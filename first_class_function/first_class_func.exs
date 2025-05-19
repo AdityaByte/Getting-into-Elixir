@@ -23,3 +23,24 @@ Enum.each(
   [1,2,3,4,5,6],
   fn(x) -> IO.puts("Square of #{x} is #{x * x}") end
 )
+
+# Another syntatic sugar for the anonymous lambda function is that &IO.puts/1
+# There is the more compact lambda defination where you don't need to create the anonymous function each element will be iterate and prints out.
+# & (Ampersand) Operator also known as the capture operator.
+# So its the full module name, the function name and the arity of the function.
+Enum.each(
+  ["hello", "aditya"],
+  &IO.puts/1
+)
+
+
+# Lut us take an another example.
+lambda = fn(x, y, z) -> x * y + z end
+# For calling this lambda
+IO.puts(lambda.(1, 2, 3))
+
+# we can make it more compact with the help of capture operator like this
+lambda1 = &(&1 * &2 + &3)
+# This snippet creates a three-arity lambda. Each argument is referred to via the &n placeholder, which identifies the nth argument of the function.
+
+IO.puts(lambda1.(1,2,3))
