@@ -5,7 +5,7 @@
   # Body
 # end
 
-# Naming: It should follows the PascalConvention.
+# Naming: It should follows the TitleCase Convention.
 
 defmodule Math do
   # Functions inside the module.
